@@ -1,0 +1,14 @@
+version: '3.8'
+
+services:
+  service:
+    build:
+      network: host
+      context: .
+      dockerfile: Dockerfile
+
+
+    volumes:
+      - .:/app
+    working_dir: /app
+    restart: on-failure
